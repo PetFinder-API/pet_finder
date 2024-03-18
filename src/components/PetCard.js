@@ -2,6 +2,15 @@
 import TinderCard from 'react-tinder-card';
 import React, { useState, useRef, useMemo } from 'react';
 import dog1 from "../pictures/dogs/96bd9aac07e756e952c0c96d1a8e84bd.jpg"
+import cat1 from "../pictures/cats/640px-Chaton.jpg"
+import dog2 from "../pictures/dogs/b640bfb_afp-32d82q9.jpg"
+import cat2 from "../pictures/cats/377122-232743_light.jpg"
+import dog3 from "../pictures/dogs/black-german-shepherd-smile.jpg"
+import cat3 from "../pictures/cats/chat-moche-souriant-74983f3a8849116a.jpg"
+import dog4 from "../pictures/dogs/e4f9dd9613ae30a361676b499f6590d7.jpg"
+
+
+
 
 import {db} from "./pets"
 
