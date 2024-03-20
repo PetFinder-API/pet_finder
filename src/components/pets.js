@@ -18,7 +18,7 @@ export const db = [
      },
    
      {
-       name: 'Henri',
+       name: 'Entouane',
        url: require("../pictures/dogs/black-german-shepherd-smile.jpg")
      },
      {
