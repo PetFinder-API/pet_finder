@@ -1,19 +1,19 @@
 
-import dog1 from "../pictures/dogs/96bd9aac07e756e952c0c96d1a8e84bd.jpg"
-import cat1 from "../pictures/cats/640px-Chaton.jpg"
-import dog2 from "../pictures/dogs/b640bfb_afp-32d82q9.jpg"
-import cat2 from "../pictures/cats/377122-232743_light.jpg"
-import dog3 from "../pictures/dogs/black-german-shepherd-smile.jpg"
-import cat3 from "../pictures/cats/chat-moche-souriant-74983f3a8849116a.jpg"
-import dog4 from "../pictures/dogs/e4f9dd9613ae30a361676b499f6590d7.jpg"
+import dog1 from "../images/dogs/96bd9aac07e756e952c0c96d1a8e84bd.jpg"
+import cat1 from "../images/cats/640px-Chaton.jpg"
+import dog2 from "../images/dogs/b640bfb_afp-32d82q9.jpg"
+import cat2 from "../images/cats/377122-232743_light.jpg"
+import dog3 from "../images/dogs/black-german-shepherd-smile.jpg"
+import cat3 from "../images/cats/chat-moche-souriant-74983f3a8849116a.jpg"
+import dog4 from "../images/dogs/e4f9dd9613ae30a361676b499f6590d7.jpg"
 
 import TinderCard from 'react-tinder-card';
-import React, { useState, useRef, useMemo } from 'react'; // Conservez uniquement cette importation
-import { getPawpularityScore } from './api'; // Importez la fonction pour récupérer le score de "pawpularity"
+import React, { useState, useRef, useMemo } from 'react';
+import { getPawpularityScore } from './api';
 import { db } from "./pets";
 
 function PetCard() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0, );
   const [lastDirection, setLastDirection] = useState();
   const currentIndexRef = useRef(currentIndex);
   const [pawpularityScore, setPawpularityScore] = useState(null);
@@ -23,13 +23,13 @@ function PetCard() {
     }
   };
   const db = [
-  { id: '96bd9aac07e756e952c0c96d1a8e84bd.jpg', name: 'dog1', url: dog1 },
-  { id: '640px-Chaton.jpg', name: 'cat1', url: cat1 },
-  { id: 'b640bfb_afp-32d82q9.jpg', name: 'dog2', url: dog2 },
-  { id: '377122-232743_light.jpg', name: 'cat2', url: cat2 },
-  { id: 'black-german-shepherd-smile.jpg', name: 'dog3', url: dog3 },
-  { id: 'chat-moche-souriant-74983f3a8849116a.jpg', name: 'cat3', url: cat3 },
-  { id: 'e4f9dd9613ae30a361676b499f6590d7.jpg', name: 'dog4', url: dog4 }
+  { id: '96bd9aac07e756e952c0c96d1a8e84bd.jpg', name: 'René', url: dog1 },
+  { id: '640px-Chaton.jpg', name: 'Kyota', url: cat1 },
+  { id: 'b640bfb_afp-32d82q9.jpg', name: 'Amine', url: dog2 },
+  { id: '377122-232743_light.jpg', name: 'José', url: cat2 },
+  { id: 'black-german-shepherd-smile.jpg', name: 'Henri', url: dog3 },
+  { id: 'chat-moche-souriant-74983f3a8849116a.jpg', name: 'Bilal', url: cat3 },
+  { id: 'e4f9dd9613ae30a361676b499f6590d7.jpg', name: 'Francis', url: dog4 }
 ];
 
   const handlePreviousButtonClick = () => {
@@ -42,7 +42,7 @@ function PetCard() {
       () =>
           Array(db.length)
               .fill(0)
-              .map(() => React.createRef()),
+              .map((i) => React.createRef()),
       []
   );
 
