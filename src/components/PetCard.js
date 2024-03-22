@@ -37,12 +37,12 @@ function PetCard() {
       childRefs[idx].current.restoreCard();
   };
 
-  const swipe = async (dir) => {
+  const swipe = async (dir, index) => {
     if (canSwipe && currentIndex < db.length) {
       console.log("Swiping", dir, "at index", currentIndex);
       await childRefs[currentIndex].current.swipe(dir);
       if (dir === "left") {
-        setCurrentIndex(currentIndex + 1); // Mettre à jour l'index après avoir swipé à gauche
+        setCurrentIndex(index - 1); // Mettre à jour l'index après avoir swipé à gauche
       }
     }
   };
@@ -52,8 +52,6 @@ function PetCard() {
     setLastDirection(direction);
     updateCurrentIndex(index - 1);
   };
-
-
 
 
   const showPawpularityScore = async () => {
