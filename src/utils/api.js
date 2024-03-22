@@ -15,3 +15,7 @@ export async function getPawpularityScore(imagePath) {
     }
 }
 
+export async function getPawpularityScoreMock(imagePath) {
+    return Math.random() * 5;
+}
+
